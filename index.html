@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+
+
+    <header>
+      <nav>
+        <div class="container">
+          <!-- Hamburger Menu -->
+          <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <!-- Logo Section -->
+          <div class="logo">
+            <img src="/assets/logos/logo.png" alt="Logo" />
+          </div>
+
+          <!-- Links Section (Desktop) -->
+          <div class="links desktop-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#highlights">HIGHLIGHTS</a>
+            <a href="#amenities">AMENITIES</a>
+            <a href="#pricing">PRICING</a>
+            <a href="#floorplans">FLOOR PLAN</a>
+            <a href="#locations">LOCATION</a>
+          </div>
+
+          <!-- Contact Us Button -->
+          <div class="contact-us">
+            <a href="#contact">
+                <button type="button">CONTACT US</button>
+            </a>
+        </div>
+        
+        <!-- Links Section (Mobile) -->
+        <div class="mobile-menu" id="mobile-menu">
+          <button class="close-btn" id="close-btn">&times;</button>
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#highlights">HIGHLIGHTS</a>
+          <a href="#amenities">AMENITIES</a>
+          <a href="#pricing">PRICING</a>
+          <a href="#floorplans">FLOOR PLAN</a>
+          <a href="#locations">LOCATION</a>
+        </div>
+      </nav>
+    </header>
+
+
+<section id="home">
+    <div class="home">
+      <img src="/assets/images/banner_image.png" />
+      <div class="wrapper_banner">
+        <div class="content">
+          <h1>BPTP The Amaario</h1>
+          <p>Sector 37D Gurgaon</p>
+          <p>Starting from 00.00 Cr</p>
+          <div class="banner_btn">
+            <button>Learn More</button>
+          </div>
+        </div>
+    
+        <div class="banner_form">
+          <form>
+            <div class="form-group1">
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group1">
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+            </div>
+            <div class="form-group1">
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+            </div>
+            <div class="form-group1">
+              <textarea id="message" name="message" placeholder="Enter your query or message" required></textarea>
+            </div>
+            <div class="submit_btn">
+              <button type="submit">CONTACT US</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+    
+    
+
+  <section id="about">
+    <div class="overview-section">
+      <div class="wrapper_section">
+        <div class="text-wrapper">
+          <div class="overview-title">
+            <span>
+              <img
+                class="overview-line"
+                src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+            ><span style="margin-left: 11px">OVERVIEW</span>
+          </div>
+
+          <div class="project-title">BPTP The Amaario</div>
+          <div class="image-group-wrapper-desktop">
+            <div
+              class="image-group"
+              style="position: relative; width: 300px; height: 400px"
+            >
+              <img data-aos="flip-left"
+                class="image-main"
+                src="https://c.animaapp.com/Kf7IpNra/img/screenshot-2024-12-23-144002@2x.png"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 3;
+                  width: 100%;
+                  height: auto;
+                "
+              />
+              <img data-aos="flip-left"
+                class="image-secondary"
+                src="https://c.animaapp.com/Kf7IpNra/img/screenshot-2024-12-23-142245@2x.png"
+                style="
+                  position: absolute;
+                  top: 10%;
+                  left: 10%;
+                  z-index: 2;
+                  width: 90%;
+                  height: auto;
+                "
+              />
+              <img data-aos="flip-left"
+                class="image-tertiary"
+                src="https://c.animaapp.com/Kf7IpNra/img/screenshot-2024-12-23-142236@2x.png"
+                style="
+                  position: absolute;
+                  top: 20%;
+                  left: 20%;
+                  z-index: 1;
+                  width: 80%;
+                  height: auto;
+                "
+              />
+            </div>
+          </div>
+          <p class="overview-description">
+            Nestled in the heart of Gurgaon, BPTP Amario in Sector 37 offers a
+            blend of modern living and serene surroundings. Designed for luxury
+            and convenience, this premium residential development features
+            world-class amenities, spacious layouts, and seamless connectivity
+            to key hubs.&nbsp;&nbsp;Amario redefines urban sophistication with
+            its thoughtful architecture and lush green landscapes.
+          </p>
+        </div>
+
+        <div class="image-group-wrapper">
+          <div
+            class="image-group"
+            style="position: relative; width: 300px; height: 400px"
+          >
+            <img
+              class="image-main"
+              src="https://c.animaapp.com/Kf7IpNra/img/screenshot-2024-12-23-144002@2x.png"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                width: 100%;
+                height: auto;
+              "
+            />
+            <img
+              class="image-secondary"
+              src="https://c.animaapp.com/Kf7IpNra/img/screenshot-2024-12-23-142245@2x.png"
+              style="
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                z-index: 2;
+                width: 90%;
+                height: auto;
+              "
+            />
+            <img
+              class="image-tertiary"
+              src="https://c.animaapp.com/Kf7IpNra/img/screenshot-2024-12-23-142236@2x.png"
+              style="
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                z-index: 1;
+                width: 80%;
+                height: auto;
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div class="stats-group">
+        <div class="stat-item" data-aos="fade-up">
+          <div id="count1" class="stat-value">9999</div>
+          <div class="stat-label">SQUARE FEET</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up">
+          <div id="count2" class="stat-value">9999</div>
+          <div class="stat-label">ACRES</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up">
+          <div id="count3" class="stat-value">10</div>
+          <div class="stat-label">CLUBHOUSE</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up">
+          <div id="count4" class="stat-value">000 Cr.</div>
+          <div class="stat-label">STARTING PRICE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section id="highlights">
+    <div class="container_highlights">
+      <div class="highlights-group">
+        <div class="text_image">
+          <div class="highlight_image" data-aos="fade-up"
+          data-aos-anchor-placement="top-center">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/bf0f/9eb8/917e733fdf30bf8d721809a850cb9014?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QbyYx7BAo5F3QW~~Scrri78x9LbGWQujG7UnYOxUZOSEvkQyqZMEdIq-GQudEU2MMAg3leKUAMcXqm6grYake3wlkPrE9wn9WfWVMrajr611H2i948~d8KgO3Ukc7qDoBV7GGV3o~4UlRvcihDQ8kfGmE89XTNdlg70lwweJOq6LK1NqWWFOXCgN4SWw-NMYU1V~pMYC9crK0JCY1shHWIp6ui4yrb~uf0GF5qf7~N0hRDLqfea4zklZuA5-Tj2xllsSatIYzIGMST69PwvVbiwdJDvH-LhllctNa5~dausD92PaEihWqX-Eegl64bBZ0j3vlW4BQvzFSC8-9~Smug__"
+              alt=""
+            />
+          </div>
+          <div class="text_container">
+            <div class="highlight_title">
+              <span>
+                <img
+                  class="overview-line"
+                  src="https://c.animaapp.com/Kf7IpNra/img/line-21-1.svg"
+                />
+              </span>
+              <span style="margin-left: 11px">LUXURY</span>
+            </div>
+            <div class="project-title">List Special Feature Here</div>
+            <p class="highlight-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut
+              neque sed erat cursus porta. Vestibulum at accumsan sem. Etiam
+              sodales efficitur ante.
+            </p>
+          </div>
+        </div>
+        <div class="text_image">
+          <div class="highlight_image" data-aos="fade-up"
+          data-aos-anchor-placement="top-center">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/bf0f/9eb8/917e733fdf30bf8d721809a850cb9014?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QbyYx7BAo5F3QW~~Scrri78x9LbGWQujG7UnYOxUZOSEvkQyqZMEdIq-GQudEU2MMAg3leKUAMcXqm6grYake3wlkPrE9wn9WfWVMrajr611H2i948~d8KgO3Ukc7qDoBV7GGV3o~4UlRvcihDQ8kfGmE89XTNdlg70lwweJOq6LK1NqWWFOXCgN4SWw-NMYU1V~pMYC9crK0JCY1shHWIp6ui4yrb~uf0GF5qf7~N0hRDLqfea4zklZuA5-Tj2xllsSatIYzIGMST69PwvVbiwdJDvH-LhllctNa5~dausD92PaEihWqX-Eegl64bBZ0j3vlW4BQvzFSC8-9~Smug__"
+              alt=""
+            />
+          </div>
+          <div class="text_container">
+            <div class="highlight_title">
+              <span>
+                <img
+                  class="overview-line"
+                  src="https://c.animaapp.com/Kf7IpNra/img/line-21-1.svg"
+                />
+              </span>
+              <span style="margin-left: 11px">LUXURY</span>
+            </div>
+            <div class="project-title">List Special Feature Here</div>
+            <p class="highlight-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut
+              neque sed erat cursus porta. Vestibulum at accumsan sem. Etiam
+              sodales efficitur ante.
+            </p>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight_section">
+      <div class="top_wrapper">
+      <div class="overview-title">
+        <span>
+          <img
+            class="overview-line"
+            src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+        ><span style="margin-left: 11px">HIGHLIGHTS</span>
+      </div>
+      <div class="project-title mt">Where Luxury Meets Lifestyle</div>
+
+     <div class="highlight_items">
+
+      <div class="highlights" data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+        <div class="icons"> <img src="/assets/images/Vector (3).svg"></div>
+        <div class="highlight_text">
+        <h2 class="title">Twin tower project</h2>
+        <p class="hight_description">Experience exclusivity and privacy in our twin tower, low-density living project.</p>
+      </div>
+      </div>
+      <div class="highlights"  data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+        <div class="icons"> <img src="/assets/images/Vector (3).svg"></div>
+        <div class="highlight_text">
+        <p class="title">Twin tower project</p>
+        <p class="hight_description">Experience exclusivity and privacy in our twin tower, low-density living project.</p>
+      </div>
+      </div>
+      <div class="highlights"  data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+        <div class="icons"> <img src="/assets/images/clarity_building-solid.svg"></div>
+        <div class="highlight_text">
+        <p class="title">Twin tower project</p>
+        <p class="hight_description">Experience exclusivity and privacy in our twin tower, low-density living project.</p>
+      </div>
+      </div>
+      <div class="highlights"  data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+        <div class="icons"> <img src="/assets/images/men-svg.svg"></div>
+        <div class="highlight_text">
+        <p class="title">Twin tower project</p>
+        <p class="hight_description">Experience exclusivity and privacy in our twin tower, low-density living project.</p>
+      </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  </section>
+
+<section id="amenities">
+  <div class="amenities">
+    <div class="overview-title">
+    <span>
+      <img
+        class="overview-line  bg_text"
+        src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+    ><span style="margin-left: 11px;color: black;">AMENETIES  </span>
+    <div class="project-title mt">Amenities That Elevate Your Living</div>
+    <div class="amenities_wrapper">
+      <div class="amenities_items">
+        <div class="amenities_item" data-aos="fade-up">
+          <div class="amenities_icon"> 
+            <img src="/assets/images/camera.svg"/>
+            <h3 class="amenities_title">24/7 Security</h3>
+        </div>
+        
+      </div>
+      <div class="amenities_item" data-aos="fade-up">
+        <div class="amenities_icon"> <img src="/assets/images/swim.svg"/>
+          <h3 class="amenities_title" >Swimming</h3>
+      </div>
+      
+    </div>
+    <div class="amenities_item" data-aos="fade-up">
+      <div class="amenities_icon"> <img src="/assets/images/fire.svg"/>
+        <h3 class="amenities_title" >Fire Fighting System</h3>
+    </div>
+    
+  </div>
+  <div class="amenities_item" data-aos="fade-up">
+    <div class="amenities_icon"> <img src="/assets/images/power.svg"/>
+      <h3 class="amenities_title" >Power Backup</h3>
+  </div>
+  
+</div>
+<div class="amenities_item" data-aos="fade-up">
+  <div class="amenities_icon"> <img src="/assets/images/club.svg"/>
+    <h3 class="amenities_title">Clubhouse</h3>
+</div>
+
+</div>
+<div class="amenities_item" data-aos="fade-up">
+  <div class="amenities_icon"> <img src="/assets/images/gym.svg"/>
+    <h3 class="amenities_title">Gym</h3>
+</div>
+
+</div>
+<div class="amenities_item" data-aos="fade-up">
+  <div class="amenities_icon"> <img src="/assets/images/party_room.svg" />
+    <h3 class="amenities_title">Party Room</h3>
+</div>
+
+</div>
+<div class="amenities_item" data-aos="fade-up">
+  <div class="amenities_icon"> <img src="/assets/images/cycle.svg"/>
+    <h3 class="amenities_title">Cyclic Track</h3>
+</div>
+
+</div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</section>
+
+
+<section id="floorplans">  <div class="brochures">
+    <div class="brochure_container">
+      <div class="brochure_img" data-aos="fade-right">
+        <img src="/assets/images/brochures_png.png" />
+
+      </div>
+      <div class="brochures_text" data-aos="fade-left">
+        <div class="overview-title">
+        <img
+        class="overview-line"
+        src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+    ><span style="margin-left: 11px;color:#ffff">Floorplans </span>
+  </div>
+    <div class="textContent">
+    <div class="project-title mt">Find Your Perfect Space</div>
+    <h2 class="brochure_highlight"> 3 BHK + SERV APARTMENTS</h2>
+    <div class="brochure_description">
+
+              <h3 class="brochure_text">Bedroom</h3>
+              <h3 class="brochure_text">2781 SQ FT </h3>
+             <h3 class="brochure_text">LOREM IPSUM</h3>
+  </div>
+  <div class="btn ">
+    <div class="download_btn">
+    <button>DOWNLOAD BROCHURE</button>
+  </div>
+    <div class="btn_img">
+      <button><img src="/assets/images/left_btn.svg"/></button>
+       <button><img src="/assets/images/rht_btn.svg " /></button>
+    </div>
+  </div>
+</div>
+  
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<section id="pricing">
+  <div class="pricing">
+
+
+    <div class="overview-title">
+      <span>
+        <img
+          class="overview-line  bg_text"
+          src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+      ><span style="margin-left: 11px;color: black;">PRICING </span>
+      <div class="project-title mt">Value That Matches Your Aspirations</div>
+    </div>
+
+
+
+      <div class="pricing_imags">
+        <div class="pricing_img"  data-aos="flip-left">
+          <img src="/assets/images/pricing_img_1.png"/>
+          <div class="imgContent">
+            <h2 class="h_title">3 BHK</h2>
+            <p class="pricing_para">STARTING FROM 2.34</p>
+            <div class="pricing_btn">
+              <button class="item_btn">View Mores</button>
+            </div>
+          </div>
+        </div>
+        <div class="pricing_img"  data-aos="flip-left">
+          <img src="/assets/images/pricing_img_2.png"/>
+          <div class="imgContent">
+            <h2 class="h_title">4 BHK</h2>
+            <p class="pricing_para">STARTING FROM 2.34</p>
+            <div class="pricing_btn">
+              <button class="item_btn">View Mores</button>
+            </div>
+          </div>
+        </div>
+        <div class="pricing_img"  data-aos="flip-left">
+          <img src="/assets/images/pricing_img_3.png"/>
+          <div class="imgContent">
+            <h2 class="h_title">MASTER PLAN</h2>
+            <p class="pricing_para">STARTING FROM 2.34</p>
+            <div class="pricing_btn">
+              <button class="item_btn">View Mores</button>
+            </div>
+          </div>
+        </div>
+        
+      
+
+     
+        
+      </div>
+  </div>
+  </div>
+</section>
+
+<section id="locations">  <div class="location">
+    <div class="overview-title">
+        <span>
+          <img
+            class="overview-line"
+            src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+        ><span style="margin-left: 11px"> LOCATION </span>
+      </div>
+        <div class="project-title mt">The Ideal Spot for Modern Living</div>
+
+        <div class="location_container">
+          <div class="text_cont ainer">
+              <div class="location_text">
+                   <p class="location_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos
+              </div>
+              <div class="location_text">
+                <p class="location_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut 
+           </div>
+           <div class="location_text">
+            <p class="location_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut 
+       </div>
+       <div class="location_text">
+        <p class="location_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+   </div>
+            </div>
+              <div class="location_img" >
+                <img src="/assets/images/map_location.png " data-aos="flip-left" />
+              </div>
+        </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="contact">
+    <div class="contact_container">
+      <div class="overview-title">
+        <span>
+          <img
+            class="overview-line bg_text"
+            src="https://c.animaapp.com/Kf7IpNra/img/line-20.png" /></span
+        ><span style="color: black;"> CONTACT US  </span>
+      </div>
+
+  </div>
+       <div class="form_text">
+        <div class="text_cont" data-aos="fade-right" >
+          <div class="project-title">We’re Here to Help</div>
+          <p class="form_des">Schedule a visit today and seize the opportunity to make the perfect deal on your dream home!</p>
+          <p class="form_phone"><img src="/assets/images/phone.svg" height="18px" width="18px"/> us a call at +9999-9999-99</p>
+          <p class="form_phone"><img src="/assets/images/mail.svg" height="18px" width="18px  ">Mail us at @loremisum.com</>
+          <p class="form_desc">By continuing, you acknowledge and agree to our Privacy Policy and Terms & Conditions, ensuring your data is handled with the utmost care and security.</p>
+
+        </div>
+        <div class="form" data-aos="fade-left">
+          <form>
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+      
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+      
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+      
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Enter your message" required style="height: 100px; width: 520px;"></textarea>
+            </div>
+                 <div class="form_btn">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+          </form>
+        </div>
+
+       </div>
+  </div>
+</section>
+
+
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_1.png" data-aos="fade-up" data-aos-anchor-placement="top-center" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_2.png" data-aos="fade-right" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_3.png" data-aos="fade-left" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_4.png" data-aos="fade-up" data-aos-anchor-placement="top-center" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_1.png" data-aos="fade-up" data-aos-anchor-placement="top-center" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_2.png" data-aos="fade-right" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_3.png" data-aos="fade-left" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/footer_image_4.png" data-aos="fade-up" data-aos-anchor-placement="top-center" />
+      </div>
+    
+    </div>
+  </div>
+  
+  
+  <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="social" role="navigation" aria-labelledby="social-heading">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p class="copyright">© 2024 <a href="https://www.sdavidprince.space">BPTP</a>. All rights reserved.</p>
+  </footer>
+  
+
+  
+
+
+
+    <script src="script.js"></script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeBtn = document.getElementById("close-btn");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        function counter(id, start, end, duration) {
+          let obj = document.getElementById(id),
+            current = start,
+            range = end - start,
+            increment = end > start ? 1 : -1,
+            step = Math.abs(Math.floor(duration / range)),
+            timer = setInterval(() => {
+              current += increment;
+              obj.textContent = current;
+              if (current == end) {
+                clearInterval(timer);
+              }
+            }, step);
+        }
+        counter("count1", 0, 900, 3000);
+        counter("count2", 0, 400, 3000);
+        counter("count3", 0, 400, 3000);
+        counter("coun4", 0, 400, 3000);
+      });
+      document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const targetId = this.getAttribute('href').substring(1); // Get the target ID
+      console.log(targetId,"$$$$$$$")
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth' // Enables smooth scrolling
+          });
+      }
+  });
+});
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4, // Default: 4 images visible
+      spaceBetween: 10, // Default spacing
+      loop: true, // Enable looping
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
+        // Responsive settings
+        0: {
+          slidesPerView: 1, // Show 1 full slide and a bit of the next one
+          spaceBetween: 10, // Add spacing to create a preview effect
+        },
+        768: {
+          slidesPerView: 1, // Show 2 slides on tablet
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4, // Show 3 slides on small desktop
+          spaceBetween: 15,
+        },
+        1200: {
+          slidesPerView: 4, // Show 4 slides on larger screens
+          spaceBetween: 20,
+        },
+      },
+    });
+  });
+</script>
+
+
+
+  
+    
+  </body>
+</html>
