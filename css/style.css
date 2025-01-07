@@ -23,8 +23,11 @@ body {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
   padding: 0;
+}
+html,body{
   overflow-x: hidden;
 }
+
 
 button {
   margin: 0;
@@ -62,6 +65,11 @@ header.scrolled {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+gap: 1rem;
 }
 
 .content {
@@ -602,11 +610,14 @@ header {
     margin: -0.8125rem -1.8125rem; 
     gap: 1.125rem;
   }
+  .highlight_image,
+.text_container {
+  flex: 1; /* Take equal width (50% each) */
+}
   
   .hight_description {
     width: 11.375rem; 
     height: 4.5rem;
-    opacity: 0;
     font-family: Ubuntu;
     font-size: 1rem; 
     font-weight: 300;
@@ -773,6 +784,7 @@ header {
     background: #FFFFFF !important;
   }
   
+  
   .brochure_highlight {
     font-family: Ubuntu;
     font-size: 1.5625rem;
@@ -784,6 +796,15 @@ header {
     color: #FFFFFF;
   }
   
+  .highlights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1.25rem; /* 36px */
+  }
+
+
+
   .brochure_text {
     font-family: Ubuntu;
     font-size: 1.25rem;
@@ -835,7 +856,8 @@ header {
   .pricing {
     height: auto;
     background: var(--white);
-    overflow: hidden;
+    /* overflow: hidden; */
+    padding: 32px 42px;
   }
   
   .heading_container {
@@ -943,7 +965,6 @@ header {
 }
 
 .location_text {
-  border-top: 0.0625rem solid #FFFFFF;
   border-bottom: 0.0625rem solid #FFFFFF;
 }
 
@@ -972,7 +993,7 @@ header {
 .form_text {
   display: flex;
   flex-direction: row;
-  gap: 1.25rem;
+  gap: 1.0rem;
 }
 
 .form_phone {
@@ -1087,7 +1108,7 @@ form {
 
 footer {
   margin-top: 1.25rem; /* 20px */
-  margin-bottom: 1.25rem; /* 20px */
+  background: #000;
 }
 
 footer .social a {
@@ -1149,6 +1170,32 @@ footer .copyright a {
   text-decoration: none;
   color: inherit;
 }
+
+.footer_items{
+  display: flex;
+  justify-content: space-between;
+}
+
+.disclaimer{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+footer .disclaimer a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer1{
+  padding: 1rem 1rem
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
 
 
 
@@ -1272,9 +1319,26 @@ footer .copyright a {
 
 
 
-
+.pricing_btn{
+  width: 105px;
+  height: 100px;
+}
 
 @media screen and (max-width: 768px) {
+
+
+  
+
+  .contact-us button {
+    font-size: .5rem;
+    font-weight: 350;
+  }
+  
+
+
+  .logo img {
+    height: 2.125rem;
+  }
  /* ===== NAVBAR   SECTION  ===== */
 
  .image-group-wrapper {
@@ -1465,7 +1529,7 @@ footer .copyright a {
   
   .brochure_img {
     width: 100%;
-    height: 33.1875rem;
+    height: auto
   }
   
   .brochure_img img {
@@ -1521,7 +1585,7 @@ footer .copyright a {
 .pricing_imags {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.875rem;
+  gap: 0px;
   margin-top: 2.25rem;
   justify-content: center;
   align-items: center;
@@ -1554,9 +1618,9 @@ footer .copyright a {
   padding: 2.25rem 2.4375rem;
 }
 
-.location_img img {
-  height: 21.9375rem;
-  width: 113%;
+.location_img iframe {
+  height: 20rem;
+  width: 114%;
 }
 
 .location_img {
@@ -1609,8 +1673,13 @@ footer .copyright a {
 .text_cont {
   display: flex;
   flex-direction: column-reverse;
-  gap: 3.9375rem;
+  gap: 1rem;
   width: 100%;
+}
+.text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .form-group input {
@@ -1630,7 +1699,7 @@ footer .copyright a {
 }
 
 .form-group textarea {
- width: 100%;
+ width: 114%;
   height: 4.335rem;
 }
 

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /disclaimer.html
+Disallow: /privacy-policy.html
+Sitemap: https://bptptheamaario.in/sitemap.xml

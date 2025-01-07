@@ -1,0 +1,5 @@
+
+RewriteOptions inherit
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^bptptheamaario.in [NC]
+RewriteRule ^(.*)$ https://www.bptptheamaario.in/$1 [L,R=301]
