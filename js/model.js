@@ -1,4 +1,3 @@
-// Open the modal
 function openModal() {
     document.getElementById('popFormModal').style.display = "block";
     document.getElementById('modal-2').style.display = "block";
@@ -23,7 +22,7 @@ function openModal() {
   
   // Automatically open the modal after 4 seconds
   window.onload = function () {
-    setTimeout(openModal, 4000);
+    setTimeout(openModal, 10000);
   };
   
 // Form Submission Handler
@@ -35,13 +34,16 @@ const submitForm = async (event) => {
     const email = formData.get("email");
     const phone = formData.get("phone");
     const message = formData.get("message");
-    const subject = `TREVOC  Received a Query From ${name}`;
+    const subject = `TREVOC royal residences  Received a Query From ${name}`;
     const project = "TREVOC ";
     const subsource = "Website";
   
     console.log("Form Data Collected:", { name, email, phone, message, subject, project, subsource });
   
-    const apiUrl = "https://api.inframantra.com/api/enquiry/mail/asdsa";
+    const apiUrl = "https://api.inframantra.com/api/enquiry/mail";
+    const loader = document.getElementById('loading');
+    loader.style.display = 'block'; // Show the loade
+ if (loader) loader.style.display = "block";
   
     try {
       const response = await fetch(apiUrl, {
@@ -52,7 +54,9 @@ const submitForm = async (event) => {
   
   
       if (response.ok) {
+        if (loader) loader.style.display = "none";
         window.location.replace("./thankyou.html");
+
         console.log("Form submitted successfully");
       } else {
         const errorMessage = await response.text();
@@ -149,8 +153,8 @@ const submitPopForm = async (event) => {
   const name = formData.get("name");
   const email = formData.get("email");
   const phone = formData.get("phone");
-  const subject = `BPTP The Amaario Received a Query From ${name}`;
-  const project = "BPTP The Amaario";
+  const subject = `Trevoc royal residences Received a Query From ${name}`;
+  const project = "Trevoc Royal Residences";
   const subsource = "Gurgaon";
 
   console.log("Pop Form Data:", { name, email, phone, subject, project, subsource });
@@ -190,10 +194,12 @@ const submitPopForm = async (event) => {
   }
 
   // API endpoint URL
-  const apiUrl = "https://api.inframantra.com/api/enquiry/mail/asdasd";
+  const apiUrl = "https://api.inframantra.com/api/enquiry/mail";
 
-  // Show loader (spinner)
-  const loader = document?.getElementById("loading");
+   // Hide loader
+     // Show loader (spinner)
+     const loader = document.getElementById('loading');
+     loader.style.display = 'block'; // Show the loade
   if (loader) loader.style.display = "block";
 
   try {
@@ -205,17 +211,19 @@ const submitPopForm = async (event) => {
       body: JSON.stringify({ name, email, phone, subject, project, subsource }),
     });
 
-    // Hide loader
-    if (loader) loader.style.display = "none";
+ 
     if (response.ok) {
+      if (loader) loader.style.display = "block";
       console.log("Pop form submitted successfully");
       window.location.replace("./thankyou.html");
     } else {
       const errorMessage = await response.text();
       console.error(`Error: ${errorMessage}`);
+      if (loader) loader.style.display = "none";
       alert("Failed to submit the form. Please try again.");
       throw new Error(`Server responded with status ${response.status}: ${errorMessage}`);
     }
+   
   } catch (error) {
     console.error("Error submitting pop form:", error.message);
     alert("An error occurred. Please try again later.");
@@ -294,4 +302,3 @@ document.addEventListener("DOMContentLoaded", () => {
   This updated code should work seamlessly. Let me know if you encounter further issues!
   
   */
-  

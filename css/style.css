@@ -12,6 +12,72 @@
   --image_text: #F1EEE7;
   --para_black:#000000
 }
+html, body {
+  overflow-x: hidden;
+}
+/* Base */
+.btn-floating:hover img {
+  margin-bottom: -3px
+}
+
+.btn-floating {
+    position: fixed;
+    right: 25px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 0;
+    z-index: 9999;
+    color: white;
+    transition: .2s;
+}
+
+.btn-floating:hover {
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.btn-floating span {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: .2s;
+    line-height: 0px;
+    display: none;
+}
+
+.btn-floating:hover span {
+    display: inline-block;
+}
+
+/* Phone */
+.btn-floating.phone {
+    bottom: 85px;
+    background-color: #760f10;
+}
+
+.btn-floating.phone:hover {
+    background-color: #c03421;
+}
+
+/* WhatsApp */
+.btn-floating.whatsapp {
+    background-color: #34af23;
+    bottom: 25px;
+}
+
+.btn-floating.whatsapp:hover {
+    background-color: #1f7a12
+}
+
+.highlight_image,.text_container{
+  flex: 1;
+}
+.container {
+  background: #FFF !important;
+}
+
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -23,11 +89,8 @@ body {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
   padding: 0;
+  /* overflow-x: hidden; */
 }
-html,body{
-  overflow-x: hidden;
-}
-
 
 button {
   margin: 0;
@@ -46,18 +109,21 @@ header.scrolled {
 .home {
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Ensure it takes full viewport height */
+  min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover; /* Ensures the image covers the container */
-  background-position: center; /* Centers the image */
+  background-size: cover; 
+  background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; 
 }
 .home img {
   min-width: -webkit-fill-available;
     object-fit: fill;
+}
+.font_weight{
+  font-weight: 600 !important;
 }
 
 .wrapper_banner {
@@ -65,11 +131,6 @@ header.scrolled {
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-.content{
-  display: flex;
-  flex-direction: column;
-gap: 1rem;
 }
 
 .content {
@@ -80,11 +141,14 @@ gap: 1rem;
   color: #FFFFFF;
   z-index: 2;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .content h1 {
   font-family: Ubuntu, sans-serif;
-  font-size: 4rem; /* Adjust for scaling */
+  font-size: 3.5rem; /* Adjust for scaling */
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -127,7 +191,7 @@ gap: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
+  /* max-width: 400px; */
 }
 
 .banner_form .form-group1 input,
@@ -171,11 +235,36 @@ gap: 1rem;
   background: none;
   border: none;
 }
-
+.mobile-logo{
+  margin-top: 0px;
+  padding-top: 0px;
+  position: relative;
+  width: 80%;
+  top: -63px;
+}
 .submit_btn button:hover {
   background: #d1ac53;
 }
 
+/* Social Links */
+.mobile-menu .social {
+  margin-top: 20px; /* Add space between navigation and social links */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+}
+
+.mobile-menu .social a {
+  font-size: 24px; /* Size of the social icons */
+  color: #333; /* Icon color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.mobile-menu .social a:hover {
+  color: #007bff; /* Change color on hover (blue as an example) */
+}
 
 
 /* ===== Navbar css ===== */
@@ -297,6 +386,7 @@ header {
   font-weight: 400;
   text-decoration: none;
   color: var(--black);
+  top: -40px;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -357,7 +447,12 @@ header {
     left: -100%;
   }
 }
-
+.floorplan {
+  display: none; /* Hide inactive floorplans */
+}
+.floorplan.active {
+  display: block; /* Show active floorplan */
+}
 
 
 /* ===== OVERVIEW SECTION  ===== */
@@ -401,6 +496,7 @@ header {
 
 .project-title {
   font-family: Ubuntu, sans-serif;
+  margin-left: 20px;
   font-size: 2.8125rem; 
   font-weight: 500;
   line-height: 1.15;
@@ -425,23 +521,17 @@ header {
 
 .image-group {
   position: relative;
-  margin-right: 4rem;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  perspective: 1000px; /* For the 3D rotation effect */
 }
 
 .image-main {
   z-index: 3;
-  transform: translate(0%, 47%); 
+  /* transform: translate(0%, 47%);  */
 }
 
-.image-secondary {
-  z-index: 2;
-  transform: translate(12%, 28%); 
-}
-
-.image-tertiary {
-  z-index: 1;
-  transform: translate(22%, 2%); 
-}
 
 .overview-description {
   font-family: Ubuntu, sans-serif;
@@ -514,12 +604,27 @@ header {
 
 .image-group img {
   position: absolute;
-  height: auto;
-  width: 100%; 
-  transform-origin: center; 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  transition: transform 1s ease-in-out;
 }
-
+.image-main {
+  transform: translateZ(); /* Bring the first image forward */
+  z-index: 3;
+  opacity: 1;
+}
+.image-secondary {
+  transform: translateX() rotateY(-15deg); /* Push the second image to the left */
+  z-index: 2;
+  opacity: 0.7;
+}
+.image-tertiary {
+  transform: translateX() rotateY(15deg); /* Push the third image to the right */
+  z-index: 1;
+  opacity: 0.5;
+}
 .image-group-wrapper {
   display: flex;
   flex-direction: column; 
@@ -596,7 +701,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 2.25rem; /* 36px */
+    /* gap: 2.25rem; 36px */
   }
   
   .mt {
@@ -607,13 +712,10 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: -0.8125rem -1.8125rem; 
-    gap: 1.125rem;
+    align-items: center;
+    /* margin: -0.8125rem -1.8125rem;  */
+    gap: .5rem;
   }
-  .highlight_image,
-.text_container {
-  flex: 1; /* Take equal width (50% each) */
-}
   
   .hight_description {
     width: 11.375rem; 
@@ -784,7 +886,6 @@ header {
     background: #FFFFFF !important;
   }
   
-  
   .brochure_highlight {
     font-family: Ubuntu;
     font-size: 1.5625rem;
@@ -796,15 +897,6 @@ header {
     color: #FFFFFF;
   }
   
-  .highlights {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1.25rem; /* 36px */
-  }
-
-
-
   .brochure_text {
     font-family: Ubuntu;
     font-size: 1.25rem;
@@ -850,14 +942,23 @@ header {
     gap: 3.4375rem;
   }
   
+.text_alignment{
+  justify-content: center;
+  text-align: start;
+  gap: 1rem;
+}
+.text_size_para{
+  font-size: 1.5rem;
+}
+  
+  
   /* =====  PRICING   SECTION  ===== */
 
 
   .pricing {
     height: auto;
     background: var(--white);
-    /* overflow: hidden; */
-    padding: 32px 42px;
+    overflow: hidden;
   }
   
   .heading_container {
@@ -870,6 +971,7 @@ header {
     gap: 1.875rem;
     justify-content: space-between;
     margin-top: 2.25rem;
+    flex-wrap: wrap;
   }
   
   .pricing_para {
@@ -887,6 +989,7 @@ header {
     width: 15.0625rem;
     height: 7.25rem;
     background: var(--image_text);
+    align-items: center;
     position: relative;
     transform: translate(7.4375rem, -7.4375rem);
     display: flex;
@@ -894,10 +997,14 @@ header {
     gap: 0.8125rem;
     padding: 0.8125rem 1.3125rem;
   }
+
+  .font_size{
+    font-size: 2rem;
+  }
   
   .pricing_btn {
     width: 3.25rem;
-    height: 0.890625rem;
+    height: 1.4rem;
     border-radius: 0.2375rem;
     background: #E2BA64;
     display: flex;
@@ -947,6 +1054,7 @@ header {
 .location_container {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   gap: 7.75rem;
   margin: 3.9375rem 0.4375rem;
 }
@@ -993,7 +1101,8 @@ header {
 .form_text {
   display: flex;
   flex-direction: row;
-  gap: 1.0rem;
+  gap: 1.25rem;
+  justify-content: space-between;
 }
 
 .form_phone {
@@ -1099,6 +1208,8 @@ form {
 }
 
 
+
+
  /* =====  FOOTER     SECTION  ===== */
 
 
@@ -1174,11 +1285,12 @@ footer .copyright a {
 .footer_items{
   display: flex;
   justify-content: space-between;
+  flex-direction: column  ;
 }
 
 .disclaimer{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
 }
 footer .disclaimer a {
@@ -1319,26 +1431,9 @@ footer .disclaimer a {
 
 
 
-.pricing_btn{
-  width: 105px;
-  height: 100px;
-}
+
 
 @media screen and (max-width: 768px) {
-
-
-  
-
-  .contact-us button {
-    font-size: .5rem;
-    font-weight: 350;
-  }
-  
-
-
-  .logo img {
-    height: 2.125rem;
-  }
  /* ===== NAVBAR   SECTION  ===== */
 
  .image-group-wrapper {
@@ -1371,21 +1466,39 @@ footer .disclaimer a {
   .overview-description {
     margin-top: 1.6875rem;
   }
-  
+
+
+
+
+
+  .home img{
+    min-width: fit-content;
+    margin-top: -25px;
+  }
+  .container{
+    background: #0000006e;
+  }
   .overview-description {
     font-size: 0.875rem;
     line-height: 1.005625rem;
   }
   
   .overview-description {
-    width: 90%;
+    color: #FFF;
+    margin-top: 0px;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+    width: 100%;
   }
   
   .overview-section {
     height: auto;
     background: #2b3d2d;
-    padding: 2.3125rem 4.625rem;
-    padding-right: 3.9375rem;
+    /* padding: 2.3125rem 4.625rem; */
+    /* padding-right: 4.9375rem; */
   }
   
 
@@ -1403,6 +1516,10 @@ footer .disclaimer a {
     height: auto;
     width: auto;
   }
+
+  .font_size{
+    font-size: 1rem !important;
+  }
   
   .text_image {
     display: flex;
@@ -1416,18 +1533,19 @@ footer .disclaimer a {
     object-fit: cover;
     max-width: none;
   }
+ 
   
   .highlight_items {
     display: grid;
     margin-top: 1.25rem;
     padding: 5.3125rem 3.125rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 5.125rem;
   }
   
   .icons img {
-    width: 2.0625rem;
-    height: 2.0625rem;
+   width: 100%;
+   height: 100%;
   }
   
   .title {
@@ -1436,15 +1554,15 @@ footer .disclaimer a {
   }
   
   .highlight-description {
-    font-size: 0.5rem;
-    font-weight: 300;
-    line-height: 0.574375rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 0.874375rem;
   }
   
   .top_wrapper {
     padding: 2.3125rem 1.25rem;
   }
-  
+
 
 
   
@@ -1514,11 +1632,18 @@ footer .disclaimer a {
   .item_btn {
     font-size: 0.461875rem;
     line-height: 0.530625rem;
+    display: flex;
   }
   
   .project-title {
+    margin-left: 0px;
     font-size: 1.25rem;
     line-height: 1.4575rem;
+    font-family: Ubuntu;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
   
   .btn {
@@ -1526,10 +1651,12 @@ footer .disclaimer a {
     flex-direction: row;
     gap: 9.9375rem;
   }
+
+
   
   .brochure_img {
     width: 100%;
-    height: auto
+    height: 33.1875rem;
   }
   
   .brochure_img img {
@@ -1540,8 +1667,9 @@ footer .disclaimer a {
   }
   
   .brochure_container {
-    flex-direction: column;
-    gap: 4.5rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 0px;
   }
   
   .download_btn button {
@@ -1573,22 +1701,25 @@ footer .disclaimer a {
  .imgContent {
   width: 10.46rem;
   height: 5.035rem;
+  left: 74px;
+  top: 36px;
 }
 
 .pricing {
   height: auto;
   background: #FFFFFF;
-  padding: 2.4375rem 2.8125rem;
+  padding: 2.4375rem 1.875rem;
   width: 100%;
 }
 
 .pricing_imags {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0px;
-  margin-top: 2.25rem;
+  gap: 0.1rem;
+  margin-top: 20px;
+  margin-bottom: -75px;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .pricing_para {
@@ -1618,9 +1749,9 @@ footer .disclaimer a {
   padding: 2.25rem 2.4375rem;
 }
 
-.location_img iframe {
-  height: 20rem;
-  width: 114%;
+.location_img img {
+  height: 21.9375rem;
+  width: 113%;
 }
 
 .location_img {
@@ -1640,9 +1771,12 @@ footer .disclaimer a {
   width: 19.17125rem;
   height: 2.36125rem;
 }
+.contact{
+  padding: 2.4375rem 1.875rem;
+}
 
 .contact img {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .form_phone {
@@ -1669,19 +1803,19 @@ footer .disclaimer a {
 .form_text {
   flex-direction: column;
 }
+.banner_form{
+  display: none;
+}
 
 .text_cont {
   display: flex;
   flex-direction: column-reverse;
-  gap: 1rem;
+  gap: 3.9375rem;
   width: 100%;
 }
-.text_container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.location_container .text_cont{
+  gap: 0px;
 }
-
 .form-group input {
   width: 19.17125rem;
   height: 1.868125rem;
@@ -1699,7 +1833,7 @@ footer .disclaimer a {
 }
 
 .form-group textarea {
- width: 114%;
+ width: 19.17125rem;
   height: 4.335rem;
 }
 
@@ -1726,28 +1860,44 @@ footer .disclaimer a {
   flex-wrap: wrap;
   justify-content: center;
 }
+.content{
+  top: 73%;
+}
+
+.content h1 {
+  color: #EECA74;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 23.82px;
+  line-height: 27.37px;
+}
+
+.content p {
+  font-size: 11.73px;
+  line-height: 13.47px;
+  margin-bottom: 20px;
+}
 
  /* =====    SECTION  ===== */
 
  .swiper-slide, swiper-slide {
   width: 100% !important;
 }
-
-.content h1 {
- 
-  font-size: 23.82px;
-
-  line-height: 27.37px;
-  
-  
+.home img {
+  min-width: -webkit-fill-available;
+  margin-top: -25px;
+  height: 58vh !important;
+}
+.home{
+  min-height: auto !important; 
+}
+.content{
+  gap:0px
 }
 
-.content p {
-  font-size: 11.73px;
-  line-height: 13.47px;
 
-  
-}
 
 }
 
@@ -1839,6 +1989,7 @@ footer .disclaimer a {
 
   .brochure_img{
     width: 100%;
+    height: fit-content;
   }
   .brochure_img img{
     width: 100%;

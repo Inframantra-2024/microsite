@@ -2,16 +2,16 @@
 // Floorplan data
 const floorplans = [
     {
-      img: "../assets/images/brochures_png.png",
+      img: "/assets/floor-plan/3bhk.avif",
       title: "Find Your Perfect Home",
       highlight: "3BHK + SERVANT ROOM",
-      size: "2781 SQ FT",
+      size: "2642-2957 Sq. Ft.",
     },
     {
-      img: "../assets/images/brochures_png.png",
+      img: "/assets/floor-plan/4bhk.avif",
       title: "Luxury Living Spaces",
       highlight: "4BHK + SERVANT ROOM",
-      size: "3200 SQ FT",
+      size: "3380 Sq. Ft.",
     }
   ];
   
