@@ -950,6 +950,14 @@ header {
 .text_size_para{
   font-size: 1.5rem;
 }
+
+
+.btn-floating{
+  display: flex
+  ;
+      justify-content: center;
+      align-items: center;
+}
   
   
   /* =====  PRICING   SECTION  ===== */
@@ -959,6 +967,7 @@ header {
     height: auto;
     background: var(--white);
     overflow: hidden;
+    padding: 23px 39px;
   }
   
   .heading_container {

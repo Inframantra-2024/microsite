@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /disclaimer.html
 Disallow: /privacy-policy.html
-Sitemap: https://trevocroyalresidences.inframantra.com//sitemap.xml
+Sitemap: https://trevocroyalresidences.inframantra.com/sitemap.xml
