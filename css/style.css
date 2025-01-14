@@ -10,7 +10,8 @@
   --title: #c68834;
   --gradient_yellow:linear-gradient(90deg, #d6a13e 0%, #c68834 50%, #edc56c 100%);
   --image_text: #F1EEE7;
-  --para_black:#000000
+  --para_black:#000000;
+  --theme_background:#054369;
 }
 html, body {
   overflow-x: hidden;
@@ -74,9 +75,7 @@ html, body {
 .highlight_image,.text_container{
   flex: 1;
 }
-.container {
-  background: #FFF !important;
-}
+
 
 
 * {
@@ -303,7 +302,7 @@ header {
 .hamburger div {
   width: 1.5625rem;
   height: 0.1875rem;
-  background-color: var(--black);
+  background-color: #ffffff;
 }
 
 /* Logo Section */
@@ -428,6 +427,10 @@ header {
   background: var(--gradient_yellow)
 }
 
+.location_img iframe{
+  width: 450px;
+  height: 350px;
+}
 
 /* Keyframe Animations */
 @keyframes slideIn {
@@ -463,7 +466,7 @@ header {
 
 .overview-section {
   height: auto;
-  background: #2b3d2d;
+  background: var(--theme_background);
   padding: 5vh 5vw; /* Use viewport-based units for padding */
 }
 
@@ -633,6 +636,14 @@ header {
 }
 
 
+.content {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  gap: 0px;
+}
+
+
 
 
   /* ===== HIGHLIGHTS  SECTION  ===== */
@@ -675,10 +686,11 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #000000;
+    margin: 1px 12px;
   }
   
   .highlight_section {
-    background: #2b3d2d;
+    background: var(--theme_background);
   }
   
   .highlight_image img {
@@ -781,30 +793,29 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.875rem;
+  gap: 0rem;
 }
 
 .amenities_item:nth-of-type(even) {
-  background: #F1EEE7;
   box-shadow: 0px 0.346875rem 0.346875rem 0px #FFFFFF26;
+  background: #F1EEE7;
 }
 
 .amenities_item:nth-of-type(odd) {
-  background-color: #c8e6c9;
   width: 15.75rem;
   height: 13rem;
   display: flex;
-  background: #2B3D2D;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.875rem;
+  background-color: var(--theme_background);
+  gap: 0rem;
 }
 
 .amenities_items {
   display: flex;
   flex-direction: row;
-  gap: 1.25rem;
+  gap: 2.25rem;
   margin-top: 3rem;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -843,7 +854,7 @@ header {
  /* ===== BROCHURES   SECTION  ===== */
  .brochures {
   height: auto;
-  background: #2B3D2D;
+  background: var(--theme_background);
   padding: 4.25rem 2.5625rem;
   margin-top: 3.0625rem;
 }
@@ -996,7 +1007,7 @@ header {
   
   .imgContent {
     width: 15.0625rem;
-    height: 7.25rem;
+    height: 7.3rem;
     background: var(--image_text);
     align-items: center;
     position: relative;
@@ -1012,7 +1023,7 @@ header {
   }
   
   .pricing_btn {
-    width: 3.25rem;
+    width: 93px;
     height: 1.4rem;
     border-radius: 0.2375rem;
     background: #E2BA64;
@@ -1020,8 +1031,11 @@ header {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     margin-top: 0;
+  }
+  .pricing_btn a{
+    text-decoration: none;
   }
   
   .h_title {
@@ -1046,6 +1060,8 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #FFFFFF;
+    position: relative;
+    top: -3px;
   }
   
 
@@ -1056,7 +1072,7 @@ header {
 
  .location {
   height: auto;
-  background: #2B3D2D;
+  background: var(--theme_background);
   padding: 2.25rem 2.4375rem;
 }
 
@@ -1082,7 +1098,7 @@ header {
 }
 
 .location_text {
-  border-bottom: 0.0625rem solid #FFFFFF;
+  border-bottom: 0.0625rem solid #d6a13e;
 }
 
 .location_img {
@@ -1443,6 +1459,9 @@ footer .disclaimer a {
 
 
 @media screen and (max-width: 768px) {
+    .location_img iframe {
+}
+
  /* ===== NAVBAR   SECTION  ===== */
 
  .image-group-wrapper {
@@ -1493,29 +1512,43 @@ footer .disclaimer a {
   }
   
   .overview-description {
-    color: #FFF;
-    margin-top: 0px;
+  border-bottom: 1px solid #d6a13e;
+  padding-bottom: 29px;
+  color: #FFF;
+  margin-top: 0px;
   font-family: Ubuntu;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-    width: 100%;
+  width: 100%;
   }
   
   .overview-section {
     height: auto;
-    background: #2b3d2d;
     /* padding: 2.3125rem 4.625rem; */
     /* padding-right: 4.9375rem; */
   }
   
+  .location_img iframe{
+    width: 116%;
+    height: 350px;
+  }
 
    /* ===== HIGHLIGHTS SECTION  ===== */
-  
+   .highlights-group div:nth-of-type(4){
+    margin-top: -35px;
+
+   }
+   .highlights-group > .text_image:last-child .overview-description{
+    border-bottom: none;
+   }
+
    .text_image:nth-child(odd) {
     flex-direction: column;
+    /* margin-bottom: -50px */
   }
+
   
   .text_image:nth-child(even) {
     flex-direction: column;
@@ -1535,10 +1568,13 @@ footer .disclaimer a {
     flex-direction: column;
     gap: 3.25rem;
   }
-  
+  .highlight_image{
+    margin-bottom: -25px;
+  }
   .highlight_image img {
     width: 100%;
     height: auto;
+    /* margin-bottom: -10px; */
     object-fit: cover;
     max-width: none;
   }
@@ -1613,14 +1649,13 @@ footer .disclaimer a {
   }
   
   .amenities_item:nth-of-type(odd) {
-    background-color: #c8e6c9;
     width: 7.8125rem;
     height: 6.4375rem;
     display: flex;
-    background: #2B3D2D;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--theme_background);
     gap: 1.875rem;
   }
   
@@ -1642,6 +1677,9 @@ footer .disclaimer a {
     font-size: 0.461875rem;
     line-height: 0.530625rem;
     display: flex;
+
+    position: relative;
+    top: 0px;
   }
   
   .project-title {
@@ -1682,7 +1720,7 @@ footer .disclaimer a {
   }
   
   .download_btn button {
-    font-size: 0.403125rem;
+    font-size: 10px;
     line-height: 0.463125rem;
   }
   
@@ -1710,8 +1748,10 @@ footer .disclaimer a {
  .imgContent {
   width: 10.46rem;
   height: 5.035rem;
-  left: 74px;
-  top: 36px;
+  left: 73px;
+  gap: 5px;
+  top: 37px;
+  align-items: center;
 }
 
 .pricing {
@@ -1754,7 +1794,6 @@ footer .disclaimer a {
 .location {
   width: 100%;
   height: auto;
-  background: #2B3D2D;
   padding: 2.25rem 2.4375rem;
 }
 
@@ -1903,7 +1942,10 @@ footer .disclaimer a {
   min-height: auto !important; 
 }
 .content{
-  gap:0px
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  gap:1rem
 }
 
 
